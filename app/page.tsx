@@ -15,5 +15,5 @@ export default function Home() {
                           fetchGuests()
                             }, [])
 
-                              return <h1>Bienvenue sur le faire-part</h1>
+                              return <h1>Bienvenue sur le faire-part !</h1>
                               }
