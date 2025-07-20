@@ -127,8 +127,8 @@ export default function ClientInvitation({ slug }: { slug: string }) {
 
           <div>
             <label className="block font-medium">Régime alimentaire :</label>
-            <div className="space-y-1 mt-1">
-              <label className="inline-flex items-center gap-2">
+            <div className="flex gap-4">
+              <label className="inline-flex items-center gap-1">
                 <input
                   type="radio"
                   name={`regime-${i}`}
@@ -142,7 +142,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
                 />
                 Végétarien
               </label>
-              <label className="inline-flex items-center gap-2">
+              <label className="inline-flex items-center gap-1">
                 <input
                   type="radio"
                   name={`regime-${i}`}
