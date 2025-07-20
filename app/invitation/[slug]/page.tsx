@@ -1,5 +1,6 @@
 import ClientInvitation from "./ClientInvitation"
 
-export default function Page({ params }: { params: { slug: string } }) {
-  return <ClientInvitation slug={params.slug} />
+export default function Page(props: any) {
+  return <ClientInvitation slug={props.params.slug} />
 }
+
