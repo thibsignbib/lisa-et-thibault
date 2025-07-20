@@ -1,10 +1,3 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @font-face {
   font-family: "AmericansClassy";
   src: url("/fonts/AmericansClassy.ttf") format("truetype");
@@ -21,6 +14,12 @@
   font-display: swap;
 }
 
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
