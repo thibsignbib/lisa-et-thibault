@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { supabase } from "@/lib/supabase-browser"
+import { toast } from "sonner"
 
 interface Guest {
   id: number
@@ -72,8 +73,10 @@ export default function ClientInvitation({ slug }: { slug: string }) {
 
     if (error) {
       console.error("Erreur de mise à jour :", error)
+      toast.error("Une erreur est survenue. Veuillez réessayer.")
       setStatus("error")
     } else {
+      toast.success("Merci ! Vos réponses ont bien été enregistrées.")
       setStatus("success")
     }
   }
