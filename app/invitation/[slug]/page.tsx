@@ -4,9 +4,20 @@ import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { supabase } from "@/lib/supabase-browser"
 
+interface Guest {
+  id: number
+  slug: string
+  names: string[]
+  type: string
+  number_of_persons: number
+  presences: boolean[]
+  presence_number: number
+  regime_alimentaire: string[]
+}
+
 export default function InvitationPage({ params }: { params: { slug: string } }) {
   const router = useRouter()
-  const [guest, setGuest] = useState<any | null>(null)
+  const [guest, setGuest] = useState<Guest | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -15,7 +26,7 @@ export default function InvitationPage({ params }: { params: { slug: string } })
         .from("guests")
         .select("*")
         .eq("slug", params.slug)
-        .single()
+        .single<Guest>()
 
       if (!data || error) {
         router.push("/404")
@@ -29,32 +40,47 @@ export default function InvitationPage({ params }: { params: { slug: string } })
   }, [params.slug, router])
 
   if (loading) return <p>Chargement...</p>
+  if (!guest) return null
 
   return (
-    <main className="p-6">
-      <h1 className="text-2xl font-bold">Bienvenue {guest.nom} 🎉</h1>
+    <main className="p-6 max-w-xl mx-auto space-y-6">
+      <h1 className="text-2xl font-bold">
+        Bienvenue {guest.names?.join(", ")} 🎉
+      </h1>
 
-      {guest.names && (
-        <div className="mt-4">
-          <h2 className="text-lg font-semibold">Personnes invitées :</h2>
-          <ul className="list-disc list-inside">
-            {guest.names.map((name: string, i: number) => (
-              <li key={i}>{name}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <section>
+        <h2 className="text-lg font-semibold">Personnes invitées :</h2>
+        <ul className="list-disc list-inside">
+          {guest.names.map((name, i) => (
+            <li key={i}>
+              {name}
+              {typeof guest.presences?.[i] === "boolean" && (
+                <span className="ml-2">
+                  {guest.presences[i] ? "✅ présent·e" : "❌ absent·e"}
+                </span>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
 
       {guest.regime_alimentaire?.length > 0 && (
-        <div className="mt-4">
+        <section>
           <h2 className="text-lg font-semibold">Préférences alimentaires :</h2>
           <ul className="list-disc list-inside">
-            {guest.regime_alimentaire.map((regime: string, i: number) => (
-              <li key={i}>{regime}</li>
+            {guest.regime_alimentaire.map((r, i) => (
+              <li key={i}>{r}</li>
             ))}
           </ul>
-        </div>
+        </section>
       )}
+
+      <section>
+        <p className="text-sm text-gray-600">
+          Type d’invité·e·s : <strong>{guest.type}</strong><br />
+          Nombre total attendu : <strong>{guest.presence_number}</strong> / {guest.number_of_persons}
+        </p>
+      </section>
     </main>
   )
 }
