@@ -15,14 +15,8 @@ interface Guest {
   regime_alimentaire: string[]
 }
 
-interface PageProps {
-  params: {
-    slug: string
-  }
-  searchParams?: Record<string, string | string[]>
-}
 
-export default function InvitationPage({ params }: PageProps) {
+export default function InvitationPage({ params }: { params: { slug: string } }) {
   const router = useRouter()
   const [guest, setGuest] = useState<Guest | null>(null)
   const [loading, setLoading] = useState(true)
