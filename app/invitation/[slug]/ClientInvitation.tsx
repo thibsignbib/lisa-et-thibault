@@ -126,16 +126,37 @@ export default function ClientInvitation({ slug }: { slug: string }) {
           </div>
 
           <div>
-            <label htmlFor={`regime-${i}`} className="block font-medium mb-1">Régime alimentaire :</label>
-            <textarea
-              id={`regime-${i}`}
-              value={regimes[i] || ""}
-              onChange={(e) => {
-                const copy = [...regimes]; copy[i] = e.target.value; setRegimes(copy)
-              }}
-              className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-400"
-              rows={2}
-            />
+            <label className="block font-medium">Régime alimentaire :</label>
+            <div className="space-y-1 mt-1">
+              <label className="inline-flex items-center gap-2">
+                <input
+                  type="radio"
+                  name={`regime-${i}`}
+                  value="vege"
+                  checked={regimes[i] === "vege"}
+                  onChange={() => {
+                    const copy = [...regimes]
+                    copy[i] = "vege"
+                    setRegimes(copy)
+                  }}
+                />
+                Végétarien
+              </label>
+              <label className="inline-flex items-center gap-2">
+                <input
+                  type="radio"
+                  name={`regime-${i}`}
+                  value="non-vege"
+                  checked={regimes[i] === "non-vege"}
+                  onChange={() => {
+                    const copy = [...regimes]
+                    copy[i] = "non-vege"
+                    setRegimes(copy)
+                  }}
+                />
+                Non végétarien
+              </label>
+            </div>
           </div>
 
           <div>
