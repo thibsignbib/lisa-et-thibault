@@ -84,7 +84,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
   if (!guest) return null
 
   return (
-    <main className="bg-white text-black p-6 max-w-2xl mx-auto space-y-8 font-serif">
+    <main className="bg-white text-black p-6 max-w-2xl mx-auto space-y-8">
       <h1 className="font-wedding">Lisa & Thibault</h1>
       <h1 className="text-3xl font-bold text-center tracking-tight">
         {guest.names.join(", ")},
