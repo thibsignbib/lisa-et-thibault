@@ -1,9 +1,11 @@
 import ClientInvitation from "./ClientInvitation"
 
-interface PageProps {
-  params: Record<string, string>
-}
-
-export default function Page({ params }: PageProps) {
+export default function Page({
+  params,
+}: {
+  params: {
+    slug: string
+  }
+}) {
   return <ClientInvitation slug={params.slug} />
 }
