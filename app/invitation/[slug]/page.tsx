@@ -1,5 +1,3 @@
-"use client"
-
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { supabase } from "@/lib/supabase-browser"
@@ -15,7 +13,14 @@ interface Guest {
   regime_alimentaire: string[]
 }
 
-export default function InvitationPage({ params }: { params: { slug: string } }) {
+interface PageProps {
+  params: {
+    slug: string
+  }
+  searchParams?: Record<string, string | string[]>
+}
+
+export default function InvitationPage({ params }: PageProps) {
   const router = useRouter()
   const [guest, setGuest] = useState<Guest | null>(null)
   const [loading, setLoading] = useState(true)
@@ -45,7 +50,7 @@ export default function InvitationPage({ params }: { params: { slug: string } })
   return (
     <main className="p-6 max-w-xl mx-auto space-y-6">
       <h1 className="text-2xl font-bold">
-        Bienvenue {guest.names?.join(", ")} 🎉
+        Bienvenue {guest.names.join(", ")} 🎉
       </h1>
 
       <section>
