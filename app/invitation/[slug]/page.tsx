@@ -1,7 +1,9 @@
 import ClientInvitation from "./ClientInvitation"
 
-type Params = { params: { slug: string } }
+interface PageProps {
+  params: Record<string, string>
+}
 
-export default function Page({ params }: Params) {
+export default function Page({ params }: PageProps) {
   return <ClientInvitation slug={params.slug} />
 }
