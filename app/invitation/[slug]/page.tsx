@@ -1,11 +1,11 @@
 import ClientInvitation from "./ClientInvitation"
 
-export default function Page({
-  params,
-}: {
+interface Params {
   params: {
     slug: string
   }
-}) {
+}
+
+export default function Page({ params }: Params) {
   return <ClientInvitation slug={params.slug} />
 }
