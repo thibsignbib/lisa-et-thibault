@@ -11,6 +11,8 @@ module.exports = {
         sans: ["var(--font-inter)", "var(--font-geist-sans)", "sans-serif"],
         mono: ["var(--font-geist-mono)", "monospace"],
         serif: ["var(--font-playfair)", "serif"],
+        american: ['"AmericansClassy"', "sans-serif"],
+        wedding: ['"WeddingSignature"', "sans-serif"],
       },
       colors: {
         primary: "#2c3e50",
