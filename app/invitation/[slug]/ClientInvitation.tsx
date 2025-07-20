@@ -23,12 +23,13 @@ export default function ClientInvitation({ slug }: { slug: string }) {
   const [guest, setGuest] = useState<Guest | null>(null)
   const [loading, setLoading] = useState(true)
 
-  // Local form state (editable)
   const [presences, setPresences] = useState<boolean[]>([])
   const [regimes, setRegimes] = useState<string[]>([])
   const [vendredi, setVendredi] = useState<boolean[]>([])
   const [samedi, setSamedi] = useState<boolean[]>([])
   const [dimanche, setDimanche] = useState<boolean[]>([])
+
+  const [status, setStatus] = useState<"idle" | "saving" | "success" | "error">("idle")
 
   useEffect(() => {
     async function fetchGuest() {
@@ -54,6 +55,29 @@ export default function ClientInvitation({ slug }: { slug: string }) {
     fetchGuest()
   }, [slug, router])
 
+  async function handleSubmit() {
+    if (!guest) return
+    setStatus("saving")
+
+    const presence_number = presences.filter(Boolean).length
+
+    const { error } = await supabase.from("guests").update({
+      presences,
+      regime_alimentaire: regimes,
+      vendredi,
+      samedi,
+      dimanche,
+      presence_number,
+    }).eq("id", guest.id)
+
+    if (error) {
+      console.error("Erreur de mise à jour :", error)
+      setStatus("error")
+    } else {
+      setStatus("success")
+    }
+  }
+
   if (loading) return <p>Chargement...</p>
   if (!guest) return null
 
@@ -64,7 +88,8 @@ export default function ClientInvitation({ slug }: { slug: string }) {
       <p className="faire-part">
         Nous avons le bonheur de vous convier à notre mariage qui aura lieu le 6/6/2026 à 14 heures à la mairie de Cusset.
         Et comme le temps passe trop vite quand on est entouré de ceux qu’on aime, nous serions vraiment heureux de vous accueillir dès le vendredi 5 juin, jusqu’au dimanche 7.
-        Un hébergement est donc prévu pour vous sur le lieu des festivités. <br />
+        Un hébergement est donc prévu pour vous sur le lieu des festivités.
+        <br />
         <strong>Rendez-vous au Domaine de la Saigne, 6 Rue de la Saigne, 03300 Creuzier-le-Vieux.</strong>
       </p>
 
@@ -85,9 +110,8 @@ export default function ClientInvitation({ slug }: { slug: string }) {
                   copy[i] = true
                   setPresences(copy)
                 }}
-              />{" "}
-              Oui
-            </label>{" "}
+              /> Oui
+            </label>
             <label className="ml-4">
               <input
                 type="radio"
@@ -98,8 +122,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
                   copy[i] = false
                   setPresences(copy)
                 }}
-              />{" "}
-              Non
+              /> Non
             </label>
           </div>
 
@@ -132,8 +155,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
                   copy[i] = e.target.checked
                   setVendredi(copy)
                 }}
-              />{" "}
-              Vendredi
+              /> Vendredi
             </label>
             <label className="block">
               <input
@@ -144,8 +166,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
                   copy[i] = e.target.checked
                   setSamedi(copy)
                 }}
-              />{" "}
-              Samedi
+              /> Samedi
             </label>
             <label className="block">
               <input
@@ -156,17 +177,29 @@ export default function ClientInvitation({ slug }: { slug: string }) {
                   copy[i] = e.target.checked
                   setDimanche(copy)
                 }}
-              />{" "}
-              Dimanche
+              /> Dimanche
             </label>
           </div>
         </section>
       ))}
 
-      <p className="text-sm text-gray-600">
-        Type : <strong>{guest.type}</strong> <br />
-        Nombre total attendu : <strong>{guest.presence_number}</strong> / {guest.number_of_persons}
-      </p>
+      {/* ✅ Bouton de soumission */}
+      <div className="pt-4">
+        <button
+          onClick={handleSubmit}
+          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        >
+          Valider mes réponses
+        </button>
+
+        {/* Feedback utilisateur */}
+        {status === "success" && (
+          <p className="text-green-600 mt-2">Merci ! Vos réponses ont bien été enregistrées.</p>
+        )}
+        {status === "error" && (
+          <p className="text-red-600 mt-2">Une erreur est survenue. Veuillez réessayer.</p>
+        )}
+      </div>
     </main>
   )
 }
