@@ -5,6 +5,10 @@ module.exports = {
     "./components/**/*.{ts,tsx}",
     "./pages/**/*.{ts,tsx}",
   ],
+  safelist: [
+    "font-wedding",
+    "font-american",
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -12,7 +16,7 @@ module.exports = {
         mono: ["var(--font-geist-mono)", "monospace"],
         serif: ["var(--font-playfair)", "serif"],
         american: ['"AmericansClassy"', "sans-serif"],
-        wedding: ['"WeddingSignature"', "sans-serif"],
+        wedding: ['"WeddingSignature"', "cursive"],
       },
       colors: {
         primary: "#2c3e50",
