@@ -7,15 +7,12 @@ module.exports = {
   ],
   safelist: [
     "font-wedding",
-    "font-american",
+    "font-kgWildways",
   ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-inter)", "var(--font-geist-sans)", "sans-serif"],
-        mono: ["var(--font-geist-mono)", "monospace"],
-        serif: ["var(--font-playfair)", "serif"],
-        american: ["AmericansClassy", "sans-serif"],
+        kgWildways: ["kgWildways", "sans-serif"],
         wedding: ["WeddingSignature", "cursive"],
       },
       colors: {

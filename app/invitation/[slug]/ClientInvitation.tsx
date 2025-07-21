@@ -86,15 +86,15 @@ export default function ClientInvitation({ slug }: { slug: string }) {
   return (
     <main className="bg-white text-black p-6 max-w-2xl mx-auto space-y-8">
       <h1 className="text-wedding">Lisa & Thibault</h1>
-      <h1 className="text-3xl font-bold text-center tracking-tight">
+      <h1 className="text-3xl text-kgWildways font-bold text-center tracking-tight">
         {guest.names.join(", ")},
       </h1>
 
-      <p className="text-american text-lg leading-relaxed bg-white/70 backdrop-blur-sm p-4 rounded shadow">
-         Nous avons le bonheur de vous convier à notre mariage qui aura lieu le 6/6/2026 à 14 heures à la mairie de Cusset. 
+      <p className="text-kgWildways text-lg leading-relaxed bg-white/70 backdrop-blur-sm p-4 rounded shadow">
+         Nous avons le bonheur de vous convier à notre mariage qui aura lieu le 6/6/2026 à 14 heures à la mairie de Cusset. <br /><br />
 
         Et comme le temps passe trop vite quand on est entouré de ceux qu’on aime, nous serions vraiment heureux de vous accueillir dès le vendredi 5 juin, jusqu’au dimanche 7. 
-        Un hébergement est donc prévu pour vous sur le lieu des festivités.
+        Un hébergement est donc prévu pour vous sur le lieu des festivités. <br /><br />
 
         <strong>Rendez-vous au Domaine de la Saigne, 6 Rue de la Saigne, 03300 Creuzier-le-Vieux.</strong>
       </p>
