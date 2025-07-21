@@ -23,6 +23,7 @@
 .text-kgWildways {
   font-family: "kgWildways";
   font-size: 1.25rem;
+  text-align: justify;
 }
 
 .text-kgWildways-title {

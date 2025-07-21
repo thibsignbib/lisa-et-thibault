@@ -96,6 +96,8 @@ export default function ClientInvitation({ slug }: { slug: string }) {
         Et comme le temps passe trop vite quand on est entouré de ceux qu’on aime, nous serions vraiment heureux de vous accueillir dès le vendredi 5 juin, jusqu’au dimanche 7. 
         Un hébergement est donc prévu pour vous sur le lieu des festivités. <br /><br />
 
+        Le formulaire ci-dessous nous aidera à tout préparer, pourriez-vous le remplir d'ici le 1er Septembre svp ? <br /><br />
+
         <strong>Rendez-vous au Domaine de la Saigne, 6 Rue de la Saigne, 03300 Creuzier-le-Vieux.</strong>
       </p>
 
@@ -104,7 +106,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
         <h3 className="text-xl font-semibold">{name}</h3>
 
         <fieldset className="space-y-2">
-          <legend className="font-medium">Présence</legend>
+          <legend className="font-medium">Je confirme ma présence</legend>
           <div className="flex gap-6">
             <label className="inline-flex items-center gap-2">
               <input
@@ -134,7 +136,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
         </fieldset>
 
         <fieldset className="space-y-2">
-          <legend className="font-medium">Régime alimentaire</legend>
+          <legend className="font-medium">Type de repas</legend>
           <div className="flex gap-6">
             <label className="inline-flex items-center gap-2">
               <input
@@ -166,7 +168,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
         </fieldset>
 
         <fieldset className="space-y-2">
-          <legend className="font-medium">Présence par jour</legend>
+          <legend className="font-medium">Je serai là...</legend>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <label className="inline-flex items-center gap-2">
               <input
@@ -177,7 +179,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
                 }}
                 className="accent-[#1B3A2F]"
               />
-              Vendredi
+              La nuit du vendredi
             </label>
             <label className="inline-flex items-center gap-2">
               <input
@@ -188,7 +190,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
                 }}
                 className="accent-[#1B3A2F]"
               />
-              Samedi
+              La nuit du samedi
             </label>
             <label className="inline-flex items-center gap-2">
               <input
@@ -199,14 +201,14 @@ export default function ClientInvitation({ slug }: { slug: string }) {
                 }}
                 className="accent-[#1B3A2F]"
               />
-              Dimanche
+              Le brunch du dimanche midi
             </label>
           </div>
         </fieldset>
       </section>
     ))}
 
-    <div className="text-center pt-4">
+    <div className="text-center pt-4 mb-10 sm:mb-16 lg:mb-24">
       <button
         onClick={handleSubmit}
         disabled={status === "saving"}
