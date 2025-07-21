@@ -14,20 +14,51 @@
   font-display: swap;
 }
 
-.text-wedding{
+.text-wedding {
   font-family: "WeddingSignature";
-  font-size: 8rem;
+  font-size: 4rem;
   text-align: center;
 }
 
-.text-kgWildways{
+.text-kgWildways {
+  font-family: "kgWildways";
+  font-size: 1.25rem;
+}
+
+.text-kgWildways-title {
   font-family: "kgWildways";
   font-size: 2rem;
 }
 
-.text-kgWildways-title{
-  font-family: "kgWildways";
-  font-size: 3rem;
+@media (min-width: 640px) {
+  .text-wedding {
+    font-size: 6rem;
+  }
+
+  .text-kgWildways {
+    font-size: 1.5rem;
+  }
+
+   .text-kgWildways-title {
+    font-size: 2.5rem;
+  }
 }
+
+@media (min-width: 1024px) {
+  .text-wedding {
+    font-size: 8rem;
+  }
+
+  .text-kgWildways {
+    font-size: 1.7rem;
+  }
+
+   .text-kgWildways-title {
+    font-size: 3rem;
+  }
+}
+
+
+
 
 @import "tailwindcss";
