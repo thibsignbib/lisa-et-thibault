@@ -4,7 +4,6 @@ import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { supabase } from "@/lib/supabase-browser"
 import { toast } from "sonner"
-import { AnimatePresence, motion } from "framer-motion"
 import { Info } from "lucide-react";
 
 interface Guest {
@@ -137,94 +136,93 @@ export default function ClientInvitation({ slug }: { slug: string }) {
           </div>
         </fieldset>
 
-    <AnimatePresence>
-    {presences[i] === true && (
-      <motion.div
-        initial={{ opacity: 0, height: 0 }}
-        animate={{ opacity: 1, height: "auto" }}
-        exit={{ opacity: 0, height: 0 }}
-        transition={{ duration: 0.3 }}
-        className="space-y-6 pt-4"
-      >
-        <fieldset className="space-y-2">
-          <legend className="font-medium">Type de repas</legend>
-          <div className="flex gap-6">
-            <label className="inline-flex items-center gap-2">
-              <input
-                type="radio"
-                name={`regime-${i}`}
-                value="vege"
-                checked={regimes[i] === "vege"}
-                onChange={() => {
-                  const copy = [...regimes]; copy[i] = "vege"; setRegimes(copy)
-                }}
-                className="accent-[#1B3A2F]"
-              />
-              Végétarien
-            </label>
-            <label className="inline-flex items-center gap-2">
-              <input
-                type="radio"
-                name={`regime-${i}`}
-                value="non-vege"
-                checked={regimes[i] === "non-vege"}
-                onChange={() => {
-                  const copy = [...regimes]; copy[i] = "non-vege"; setRegimes(copy)
-                }}
-                className="accent-[#1B3A2F]"
-              />
-              Non végétarien
-            </label>
-          </div>
-        </fieldset>
 
-        <fieldset className="space-y-2">
-          <legend className="font-medium">Je serai là...</legend>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <label className="inline-flex items-center gap-2">
-              <input
-                type="checkbox"
-                checked={vendredi[i]}
-                onChange={(e) => {
-                  const copy = [...vendredi]; copy[i] = e.target.checked; setVendredi(copy)
-                }}
-                className="accent-[#1B3A2F]"
-              />
-              La nuit du vendredi
-            </label>
-            <label className="inline-flex items-center gap-2">
-              <input
-                type="checkbox"
-                checked={samedi[i]}
-                onChange={(e) => {
-                  const copy = [...samedi]; copy[i] = e.target.checked; setSamedi(copy)
-                }}
-                className="accent-[#1B3A2F]"
-              />
-              La nuit du samedi
-            </label>
-            <label className="inline-flex items-center gap-2">
-              <input
-                type="checkbox"
-                checked={dimanche[i]}
-                onChange={(e) => {
-                  const copy = [...dimanche]; copy[i] = e.target.checked; setDimanche(copy)
-                }}
-                className="accent-[#1B3A2F]"
-              />
-              Le brunch du dimanche midi
-            </label>
-          </div>
-        </fieldset>
-        <div className="flex items-start gap-2 text-sm text-[#1B3A2F]/80 mt-2">
-          <Info className="w-5 h-5 mt-[2px]" />
-          <p>
-            Un hébergement est déjà prévu pour vous, sur place, les deux nuits. Vous n’avez pas besoin d’en réserver.
-          </p>
+    {presences[i] === true && (
+      <>
+        <div className="space-y-6 pt-2">
+      {/* Type de repas */}
+      <fieldset className="space-y-2">
+        <legend className="font-medium">Type de repas</legend>
+        <div className="flex gap-6">
+          <label className="inline-flex items-center gap-2">
+            <input
+              type="radio"
+              name={`regime-${i}`}
+              value="vege"
+              checked={regimes[i] === "vege"}
+              onChange={() => {
+                const copy = [...regimes]; copy[i] = "vege"; setRegimes(copy)
+              }}
+              className="accent-[#1B3A2F]"
+            />
+            Végétarien
+          </label>
+          <label className="inline-flex items-center gap-2">
+            <input
+              type="radio"
+              name={`regime-${i}`}
+              value="non-vege"
+              checked={regimes[i] === "non-vege"}
+              onChange={() => {
+                const copy = [...regimes]; copy[i] = "non-vege"; setRegimes(copy)
+              }}
+              className="accent-[#1B3A2F]"
+            />
+            Non végétarien
+          </label>
         </div>
-      </motion.div>
+      </fieldset>
+
+      {/* Présence par jour */}
+      <fieldset className="space-y-2">
+        <legend className="font-medium">Je serai là...</legend>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <label className="inline-flex items-center gap-2">
+            <input
+              type="checkbox"
+              checked={vendredi[i]}
+              onChange={(e) => {
+                const copy = [...vendredi]; copy[i] = e.target.checked; setVendredi(copy)
+              }}
+              className="accent-[#1B3A2F]"
+            />
+            La nuit du vendredi
+          </label>
+          <label className="inline-flex items-center gap-2">
+            <input
+              type="checkbox"
+              checked={samedi[i]}
+              onChange={(e) => {
+                const copy = [...samedi]; copy[i] = e.target.checked; setSamedi(copy)
+              }}
+              className="accent-[#1B3A2F]"
+            />
+            La nuit du samedi
+          </label>
+          <label className="inline-flex items-center gap-2">
+            <input
+              type="checkbox"
+              checked={dimanche[i]}
+              onChange={(e) => {
+                const copy = [...dimanche]; copy[i] = e.target.checked; setDimanche(copy)
+              }}
+              className="accent-[#1B3A2F]"
+            />
+            Le brunch du dimanche midi
+          </label>
+        </div>
+      </fieldset>
+
+      {/* Info */}
+      <div className="flex items-start gap-2 text-sm text-[#1B3A2F]/80">
+        <Info className="w-5 h-5 mt-[2px]" />
+        <p>
+          Un hébergement est déjà prévu pour vous, sur place, les deux nuits. Vous n’avez pas besoin d’en réserver un.
+        </p>
+      </div>
+    </div>
+      </>
       )}
-      </AnimatePresence>
       </section>
     ))}
 
