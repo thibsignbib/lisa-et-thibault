@@ -96,7 +96,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
         Et comme le temps passe trop vite quand on est entouré de ceux qu’on aime, nous serions vraiment heureux de vous accueillir dès le vendredi 5 juin, jusqu’au dimanche 7. 
         Un hébergement est donc prévu pour vous sur le lieu des festivités. <br /><br />
 
-        Le formulaire ci-dessous nous aidera à tout préparer, pourriez-vous le remplir d'ici le 1er Septembre svp ? <br /><br />
+        Le formulaire ci-dessous nous aidera à tout préparer, pourriez-vous le remplir d’ici le 1er Septembre svp ? <br /><br />
 
         <strong>Rendez-vous au Domaine de la Saigne, 6 Rue de la Saigne, 03300 Creuzier-le-Vieux.</strong>
       </p>
