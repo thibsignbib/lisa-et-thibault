@@ -17,11 +17,16 @@
 .text-wedding{
   font-family: "WeddingSignature";
   font-size: 8rem;
+  text-align: center;
 }
 
 .text-kgWildways{
   font-family: "kgWildways";
   font-size: 2rem;
+}
+
+.text-kgWildways-title{
+  font-size: 3rem;
 }
 
 @import "tailwindcss";
