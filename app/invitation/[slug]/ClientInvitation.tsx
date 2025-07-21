@@ -140,10 +140,11 @@ export default function ClientInvitation({ slug }: { slug: string }) {
     <AnimatePresence>
     {presences[i] === true && (
       <motion.div
-      initial={{ opacity: 0, height: 0 }}
-      animate={{ opacity: 1, height: "auto" }}
-      exit={{ opacity: 0, height: 0 }}
-      transition={{ duration: 0.3 }}
+        initial={{ opacity: 0, height: 0 }}
+        animate={{ opacity: 1, height: "auto" }}
+        exit={{ opacity: 0, height: 0 }}
+        transition={{ duration: 0.3 }}
+        className="space-y-6 pt-4"
       >
         <fieldset className="space-y-2">
           <legend className="font-medium">Type de repas</legend>
@@ -218,7 +219,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
         <div className="flex items-start gap-2 text-sm text-[#1B3A2F]/80 mt-2">
           <Info className="w-5 h-5 mt-[2px]" />
           <p>
-            Un hébergement est déjà prévu pour vous, sur place, les deux nuits. Vous n'avez pas besoin d'en réserver.
+            Un hébergement est déjà prévu pour vous, sur place, les deux nuits. Vous n’avez pas besoin d’en réserver.
           </p>
         </div>
       </motion.div>
