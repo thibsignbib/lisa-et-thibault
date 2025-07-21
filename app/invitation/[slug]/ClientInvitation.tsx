@@ -86,7 +86,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
   return (
   <main className="min-h-screen text-gray-800 p-6 max-w-3xl mx-auto space-y-10">
     <h1 className="text-wedding">Lisa & Thibault</h1>
-      <h1 className="text-3xl text-kgWildways font-bold text-center tracking-tight">
+      <h1 className="text-3xl text-kgWildways-title font-medium text-center tracking-tight">
         {guest.names.join(", ")},
       </h1>
 
