@@ -207,7 +207,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
             </label>
           </div>
         </fieldset>
-      <>
+      </>
       )}
       </section>
     ))}
