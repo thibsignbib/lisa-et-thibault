@@ -135,6 +135,8 @@ export default function ClientInvitation({ slug }: { slug: string }) {
           </div>
         </fieldset>
 
+    {presences[i] === true && (
+      <>
         <fieldset className="space-y-2">
           <legend className="font-medium">Type de repas</legend>
           <div className="flex gap-6">
@@ -205,6 +207,8 @@ export default function ClientInvitation({ slug }: { slug: string }) {
             </label>
           </div>
         </fieldset>
+      <>
+      )}
       </section>
     ))}
 
