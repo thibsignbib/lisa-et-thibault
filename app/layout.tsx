@@ -18,6 +18,7 @@ export default function RootLayout({
       <body
         className={`
            antialiased bg-[#fdfaf5] text-[#2e2e2e]
+           bg-gradient-to-b from-white to-[#f8f4f0] min-h-screen
         `}
       >
         {/* Fond papier */}
