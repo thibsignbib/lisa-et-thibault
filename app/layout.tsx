@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="!bg-white dark:!bg-white dark:text-black">
+    <html className="bg-white text-black">
       <body
         className="antialiased bg-[#fdfaf5] text-[#2e2e2e] bg-gradient-to-b from-white to-[#f8f4f0] min-h-screen text-[#2e2e2e]" >
         {/* Fond papier */}
