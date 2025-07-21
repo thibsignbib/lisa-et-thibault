@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation"
 import { supabase } from "@/lib/supabase-browser"
 import { toast } from "sonner"
 import { AnimatePresence, motion } from "framer-motion"
+import { Info } from "lucide-react";
 
 interface Guest {
   id: number
@@ -214,6 +215,12 @@ export default function ClientInvitation({ slug }: { slug: string }) {
             </label>
           </div>
         </fieldset>
+        <div className="flex items-start gap-2 text-sm text-[#1B3A2F]/80 mt-2">
+          <Info className="w-5 h-5 mt-[2px]" />
+          <p>
+            Un hébergement est déjà prévu pour vous, sur place, les deux nuits. Vous n'avez pas besoin d'en réserver.
+          </p>
+        </div>
       </motion.div>
       )}
       </AnimatePresence>
