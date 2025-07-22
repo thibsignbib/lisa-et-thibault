@@ -43,6 +43,8 @@ const translations = {
     info: "Un hébergement est déjà prévu pour vous, sur place, les deux nuits. Vous n’avez pas besoin d’en réserver un.",
     submit: "Valider mes réponses",
     submitting: "Envoi en cours...",
+    toastSuccess: "Merci ! Vos réponses ont bien été enregistrées.",
+    toastError: "Une erreur est survenue. Veuillez réessayer.",
   },
   de: {
     intro: (
@@ -65,6 +67,8 @@ const translations = {
     info: "Eine Unterkunft ist für euch bereits vor Ort reserviert, für beide Nächte. Ihr müsst nichts buchen.",
     submit: "Antworten abschicken",
     submitting: "Wird gesendet...",
+    toastSuccess: "Vielen Dank! Eure Antworten wurden gespeichert.",
+    toastError: "Es ist ein Fehler aufgetreten. Bitte versucht es erneut.",
   }
 }
 
@@ -108,12 +112,6 @@ export default function ClientInvitation({ slug }: { slug: string }) {
     if (!guest) return
     setStatus("saving")
 
-    if (presences.some((val) => val === undefined)) {
-      toast.error("Merci d’indiquer votre présence pour chaque personne.")
-      setStatus("idle")
-      return
-    }
-
     const presence_number = presences.filter(Boolean).length
 
     const { error } = await supabase.from("guests").update({
@@ -127,10 +125,10 @@ export default function ClientInvitation({ slug }: { slug: string }) {
 
     if (error) {
       console.error("Erreur de mise à jour :", error)
-      toast.error("Une erreur est survenue. Veuillez réessayer.")
+      toast.error(t.toastError)
       setStatus("error")
     } else {
-      toast.success("Merci ! Vos réponses ont bien été enregistrées.")
+      toast.success(t.toastSuccess)
       setStatus("success")
     }
   }
