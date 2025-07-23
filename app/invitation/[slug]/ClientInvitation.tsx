@@ -50,8 +50,7 @@ const translations = {
     intro: (
       <>
         Wir freuen uns, euch zu unserer Hochzeit am 06.06.2026 um 14 Uhr im Standesamt von Cusset einzuladen. <br /><br />
-        Weil die Zeit mit unseren Liebsten immer zu schnell vergeht, würden wir uns freuen, euch bereits ab Freitag, dem 5. Juni, bis Sonntag, dem 7., willkommen zu heißen. <br />
-        Eine Unterkunft ist für euch direkt am Veranstaltungsort vorgesehen. <br /><br />
+        Weil die Zeit mit unseren Lieblingsmenschen immer zu schnell vergeht, würden wir uns freuen, euch bereits ab Freitag, dem 5. Juni, bis Sonntag, dem 7., willkommen zu heißen. <br /><br /><br />
         Bitte füllt das untenstehende Formular bis spätestens zum 1. September aus, damit wir alles vorbereiten können. <br /><br />
         <strong>Treffpunkt: Domaine de la Saigne, 6 Rue de la Saigne, 03300 Creuzier-le-Vieux.</strong>
       </>
@@ -59,12 +58,12 @@ const translations = {
     confirmPresence: "Ich bestätige meine Anwesenheit",
     vegetarian: "Vegetarisch",
     nonVegetarian: "Nicht vegetarisch",
-    mealType: "Art des Essens",
+    mealType: "Essen Auswahl",
     iWillBeThere: "Ich bin da...",
-    friday: "Freitag Nacht",
-    saturday: "Samstag Nacht",
+    friday: "Freitag Abends",
+    saturday: "Samstag Abends",
     sunday: "Sonntagmittag Brunch",
-    info: "Eine Unterkunft ist für euch bereits vor Ort reserviert, für beide Nächte. Ihr müsst nichts buchen.",
+    info: "Eine Unterkunft wirf für euch vorgesucht, für alle euch Nächte. Ihr müsst uns nur eure Plänne vorgeben.",
     submit: "Antworten abschicken",
     submitting: "Wird gesendet...",
     toastSuccess: "Vielen Dank! Eure Antworten wurden gespeichert.",
