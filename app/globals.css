@@ -56,6 +56,15 @@
    .text-kgWildways-title {
     font-size: 2.5rem;
   }
+
+  .lisathibaultimage{
+  max-width: 70%;
+  margin-bottom: 0.6rem;
+}
+
+.buttonwithinimage{
+  margin-bottom: -2.1rem;
+}
 }
 
 @media (min-width: 1024px) {
@@ -70,6 +79,15 @@
    .text-kgWildways-title {
     font-size: 3rem;
   }
+
+  .lisathibaultimage{
+  max-width: 75%;
+  margin-bottom: 0.6rem;
+}
+
+.buttonwithinimage{
+  margin-bottom: -2rem;
+}
 }
 
 
