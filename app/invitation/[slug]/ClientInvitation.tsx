@@ -140,6 +140,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
   return (
     <main className="min-h-screen text-[#1B3A2F] p-6 max-w-3xl mx-auto space-y-10">
       <h1 className="text-wedding">Lisa & Thibault</h1>
+      <img src="/lisathibaultT.png" alt="Lisa et Thibault" />
       <h1 className="text-3xl text-kgWildways-title font-medium text-center tracking-tight">
         {guest.names.join(", ")},
       </h1>
@@ -275,6 +276,8 @@ export default function ClientInvitation({ slug }: { slug: string }) {
           {status === "saving" ? t.submitting : t.submit}
         </button>
       </div>
+
+      <img src="/bicyclesT.png" alt="Bicycles" />
     </main>
   )
 }
