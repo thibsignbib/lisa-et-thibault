@@ -34,6 +34,8 @@ const translations = {
     ),
     confirmPresence: "Je confirme ma présence",
     vegetarian: "Végétarien",
+    oui: "oui",
+    non: "non",
     nonVegetarian: "Non végétarien",
     mealType: "Type de repas",
     iWillBeThere: "Je serai là...",
@@ -57,6 +59,8 @@ const translations = {
     ),
     confirmPresence: "Ich bestätige meine Anwesenheit",
     vegetarian: "Vegetarisch",
+    oui: "ja",
+    non: "nein",
     nonVegetarian: "Nicht vegetarisch",
     mealType: "Essen Auswahl",
     iWillBeThere: "Ich bin da...",
@@ -186,7 +190,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
                   }}
                   className="accent-[#1B3A2F]"
                 />
-                Oui
+                {t.oui}
               </label>
               <label className="inline-flex items-center gap-2">
                 <input
@@ -198,7 +202,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
                   }}
                   className="accent-[#1B3A2F]"
                 />
-                Non
+                {t.non}
               </label>
             </div>
           </fieldset>
