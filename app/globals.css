@@ -31,22 +31,46 @@
 
 .text-wedding {
   font-family: "WeddingSignature";
-  font-size: 4rem;
+  font-size: 8rem;
   text-align: center;
 }
 
 .text-kgWildways {
   font-family: "kgWildways";
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   text-align: justify;
 }
 
 .text-kgWildways-title {
   font-family: "kgWildways";
-  font-size: 2rem;
+  font-size: 3rem;
+  margin-bottom: 0.7rem;
 }
 
 @media (max-width: 640px) {
+  .text-wedding {
+    font-size: 4rem;
+  }
+
+  .text-kgWildways {
+    font-size: 1.25rem;
+  }
+
+   .text-kgWildways-title {
+    font-size: 2rem;
+  }
+
+  .lisathibaultimage{
+  max-width: 85%;
+  margin-bottom: 0.6rem;
+}
+
+.buttonwithinimage{
+  margin-bottom: -1.6rem;
+}
+}
+
+@media (max-width: 1024px) {
   .text-wedding {
     font-size: 6rem;
   }
@@ -59,36 +83,13 @@
     font-size: 2.5rem;
   }
 
-  .lisathibaultimage{
-  max-width: 85%;
-  margin-bottom: 0.6rem;
-}
-
-.buttonwithinimage{
-  margin-bottom: -1.8rem;
-}
-}
-
-@media (max-width: 1024px) {
-  .text-wedding {
-    font-size: 8rem;
-  }
-
-  .text-kgWildways {
-    font-size: 1.7rem;
-  }
-
-   .text-kgWildways-title {
-    font-size: 3rem;
-  }
-
     .lisathibaultimage{
   max-width: 75%;
   margin-bottom: 0.6rem;
 }
 
 .buttonwithinimage{
-  margin-bottom: -2rem;
+  margin-bottom: -1.8rem;
 }
 
 }
