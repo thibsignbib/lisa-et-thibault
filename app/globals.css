@@ -47,6 +47,10 @@
   margin-bottom: 0.7rem;
 }
 
+  .homepagepicture{
+    max-width: 50%;
+  }
+
 @media (max-width: 640px) {
   .text-wedding {
     font-size: 4rem;
@@ -54,6 +58,10 @@
 
   .text-kgWildways {
     font-size: 1.25rem;
+  }
+
+  .homepagepicture{
+    max-width: 75%;
   }
 
    .text-kgWildways-title {
@@ -91,6 +99,10 @@
 .buttonwithinimage{
   margin-bottom: -1.8rem;
 }
+
+  .homepagepicture{
+    max-width: 75%;
+  }
 
 }
 

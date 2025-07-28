@@ -11,7 +11,7 @@ export const metadata = {
     description: "Lisa & Thibault vous invitent à leur mariage le 6 juin 2026.",
     images: [
       {
-        url: "/lisathibault.png",
+        url: "/lisathibaultOG.png",
         width: 1200,
         height: 630,
         alt: "Lisa & Thibault",
@@ -19,15 +19,15 @@ export const metadata = {
     ],
   },
   icons: {
-    icon: "/lisathibault.png",
-    shortcut: "/lisathibault.png",
-    apple: "/lisathibault.png",
+    icon: "/lisathibaultOG.png",
+    shortcut: "/lisathibaultOG.png",
+    apple: "/lisathibaultOG.png",
   },
   twitter: {
     card: "summary_large_image",
     title: "Lisa & Thibault – Mariage 2026",
     description: "Lisa & Thibault vous invitent à leur mariage le 6 juin 2026.",
-    images: ["/lisathibault.png"],
+    images: ["/lisathibaultOG.png"],
   },
 }
 
