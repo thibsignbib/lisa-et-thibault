@@ -28,7 +28,7 @@ const translations = {
       <>
         Nous avons le bonheur de vous convier à notre mariage qui aura lieu le 06/06/2026 à 14 heures à la mairie de Cusset. <br /><br />
         Et comme le temps passe trop vite quand on est entouré de ceux qu’on aime, nous serions vraiment heureux de vous accueillir dès le vendredi 5 juin, jusqu’au dimanche 7. <br />
-        Un hébergement est donc prévu pour vous sur le lieu des festivités. <br /><br />
+        Un hébergement gratuit est donc déjà prévu pour vous sur le lieu des festivités. <br /><br />
         Le formulaire ci-dessous nous aidera à tout préparer, pourriez-vous le remplir d’ici le 1er septembre svp ? <br /><br />
         <strong>Rendez-vous au Domaine de la Saigne, 6 Rue de la Saigne, 03300 Creuzier-le-Vieux.</strong>
       </>
@@ -43,7 +43,7 @@ const translations = {
     friday: "La nuit du vendredi",
     saturday: "La nuit du samedi",
     sunday: "Le brunch du dimanche midi",
-    info: "Un hébergement est déjà prévu pour vous, sur place, les deux nuits. Vous n’avez pas besoin d’en réserver un.",
+    info: "Un hébergement (gratuit) est déjà prévu pour vous, sur place, les deux nuits. Vous n’avez pas besoin d’en réserver un.",
     infochildren: (
       <>
         Le mariage n’ayant pas été adapté pour accueillir les plus jeunes, nous vous incitons à les faire garder et à vous <s>bourrer la gueule</s> lâcher. Comme nous savons que cette logistique est parfois compliquée, nous vous proposons quand même de choisir.
