@@ -19,9 +19,9 @@ export const metadata = {
     ],
   },
   icons: {
-    icon: "/lisathibaultOG.png",
-    shortcut: "/lisathibaultOG.png",
-    apple: "/lisathibaultOG.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
   twitter: {
     card: "summary_large_image",
