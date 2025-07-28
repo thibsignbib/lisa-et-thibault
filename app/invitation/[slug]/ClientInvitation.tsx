@@ -158,7 +158,11 @@ export default function ClientInvitation({ slug }: { slug: string }) {
   }
 
   if (!guest || loading || !isReady) {
-    return <p className="text-center mt-10">Chargement...</p>
+    return (
+    <main className="min-h-screen flex items-center justify-center text-[#1B3A2F] p-6">
+      <p className="text-xl text-kgWildways">Chargement...</p>
+    </main>
+    )
   }
 
   const t = translations[guest.langue || "fr"]
