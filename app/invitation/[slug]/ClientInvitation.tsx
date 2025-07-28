@@ -192,9 +192,9 @@ export default function ClientInvitation({ slug }: { slug: string }) {
       {guest.names.map((name, i) => (
         
         <section key={i} className="rounded-2xl border border-gray-200 p-6 bg-white/90 shadow-md space-y-6">
-          {i === 1 && (
+          {i === 2 && (
             <div className="flex items-start gap-2 text-sm text-[#1B3A2F]/80">
-                  <Info className="w-6 h-6 mt-[2px] shrink-0" />
+                  <Info className="infoT shrink-0" />
                   <p>{t.infochildren}</p>
                 </div>
           )}
@@ -306,7 +306,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
                 </fieldset>
 
                 <div className="flex items-start gap-2 text-sm text-[#1B3A2F]/80">
-                  <Info className="w-5 h-5 mt-[2px]" />
+                  <Info className="infoT shrink-0" />
                   <p>{t.info}</p>
                 </div>
               </div>
