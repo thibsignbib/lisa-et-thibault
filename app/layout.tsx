@@ -19,8 +19,8 @@ export const metadata = {
     ],
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
+    icon: "/faviconT.ico",
+    shortcut: "/faviconT.ico",
     apple: "/apple-touch-icon.png",
   },
   twitter: {
@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html className="bg-white text-black">
       <head>
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/faviconT.ico" type="image/x-icon" />
       </head>
       <body
         className="antialiased bg-[#fdfaf5] text-[#2e2e2e] bg-gradient-to-b from-white to-[#f8f4f0] min-h-screen text-[#2e2e2e]" >
