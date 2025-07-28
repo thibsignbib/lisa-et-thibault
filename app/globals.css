@@ -46,7 +46,7 @@
   font-size: 2rem;
 }
 
-@media (min-width: 640px) {
+@media (max-width: 640px) {
   .text-wedding {
     font-size: 6rem;
   }
@@ -60,7 +60,7 @@
   }
 
   .lisathibaultimage{
-  max-width: 10%;
+  max-width: 85%;
   margin-bottom: 0.6rem;
 }
 
@@ -69,7 +69,7 @@
 }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   .text-wedding {
     font-size: 8rem;
   }
@@ -83,7 +83,7 @@
   }
 
     .lisathibaultimage{
-  max-width: 10%;
+  max-width: 75%;
   margin-bottom: 0.6rem;
 }
 
