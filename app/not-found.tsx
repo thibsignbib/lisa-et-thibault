@@ -12,9 +12,11 @@ export default function NotFound() {
         <div className="w-px h-32 bg-[#1B3A2F]/30 hidden sm:block" />
         <div className="text-center sm:text-left space-y-2">
           <h1 className="text-4xl font-bold text-wedding">404</h1>
-          <p className="text-xl text-kgWildways-title">Invitation introuvable</p>
+          <p className="text-xl text-kgWildways-title">Page introuvable</p>
           <p className="text-kgWildways text-sm max-w-sm">
-            Le lien est peut-être incorrect ou a expiré. <br />
+            Le lien est peut-être incorrect ou a expiré.<br />
+            Cliquez sur le lien envoyé par nos soins pour retrouver le faire-part personnalisé !<br />
+            N'hésitez-pas à nous contacter en cas de difficultés !
           </p>
         </div>
       </div>

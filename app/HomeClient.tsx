@@ -47,7 +47,7 @@ export default function HomeClient() {
       />
       <h1 className="text-wedding text-wedding-home text-4xl sm:text-6xl text-center">Lisa & Thibault</h1>
       <p className="text-kgWildways text-lg leading-relaxed backdrop-blur-sm p-4 rounded text-center">
-        Clique sur le lien envoyé par nos soins pour retrouver le faire-part personnalisé !
+        Cliquez sur le lien envoyé par nos soins pour retrouver le faire-part personnalisé !
       </p>
     </main>
   )
