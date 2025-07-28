@@ -44,6 +44,7 @@ const translations = {
     saturday: "La nuit du samedi",
     sunday: "Le brunch du dimanche midi",
     info: "Un hébergement est déjà prévu pour vous, sur place, les deux nuits. Vous n’avez pas besoin d’en réserver un.",
+    infochildren: "Le mariage n’ayant pas été adapté pour accueillir les plus jeunes, nous vous incitons à les faire garder et à vous <s>bourrer la gueule</s> lâcher. Comme nous savons que faire garder les enfants n’est pas toujours facile, nous vous proposons quand même de choisir.",
     submit: "Valider mes réponses",
     submitting: "Envoi en cours...",
     toastSuccess: "Merci ! Vos réponses ont bien été enregistrées.",
@@ -69,6 +70,7 @@ const translations = {
     saturday: "Samstag Abends",
     sunday: "Sonntagmittag Brunch",
     info: "Eine Unterkunft wirf für euch vorgesucht, für alle euch Nächte. Ihr müsst uns nur eure Plänne vorgeben.",
+    infochildren: "Da die Hochzeit nicht auf die Jüngsten ausgelegt ist, empfehlen wir euch, die Kinder betreuen zu lassen und euch so richtig <s>die Birne wegzuknallen</s> gehen zu lassen. Da uns bewusst ist, dass es nicht immer einfach ist, eine Betreuung zu organisieren, geben wir euch trotzdem die Möglichkeit zu wählen.",
     submit: "Antworten abschicken",
     submitting: "Wird gesendet...",
     toastSuccess: "Vielen Dank! Eure Antworten wurden gespeichert.",
@@ -180,7 +182,15 @@ export default function ClientInvitation({ slug }: { slug: string }) {
       </p>
 
       {guest.names.map((name, i) => (
+        
         <section key={i} className="rounded-2xl border border-gray-200 p-6 bg-white/90 shadow-md space-y-6">
+          {i === 1 && (
+            <div className="flex items-start gap-2 text-sm text-[#1B3A2F]/80">
+                  <Info className="w-5 h-5 mt-[2px]" />
+                  <p>{t.infochildren}</p>
+                </div>
+          )}
+        
           <h3 className="text-xl font-semibold">{name}</h3>
 
           <fieldset className="space-y-2">
