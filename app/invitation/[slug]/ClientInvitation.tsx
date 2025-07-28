@@ -182,7 +182,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
       <h1 className="text-wedding titlelisathibault">Lisa & Thibault</h1>
       <img src="/lisathibaultT.png" alt="Lisa et Thibault" className="mx-auto lisathibaultimage" />
       <h1 className="text-3xl text-kgWildways-title font-medium text-center tracking-tight">
-        {guest.names.join(", ")},
+        {guest.names.slice(0, 2).join(", ")},
       </h1>
 
       <p className="text-kgWildways text-lg leading-relaxed backdrop-blur-sm p-4 rounded">
