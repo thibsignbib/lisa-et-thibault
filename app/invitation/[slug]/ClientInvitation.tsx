@@ -58,7 +58,7 @@ const translations = {
     intro: (
       <>
         Wir freuen uns, euch zu unserer Hochzeit am 06.06.2026 um 14 Uhr im Standesamt von Cusset einzuladen. <br /><br />
-        Weil die Zeit mit unseren Lieblingsmenschen immer zu schnell vergeht, würden wir uns freuen, euch bereits ab Freitag, dem 5. Juni, bis Sonntag, dem 7., willkommen zu heißen. <br /><br /><br />
+        Weil die Zeit mit unseren Lieblingsmenschen immer zu schnell vergeht, würden wir uns freuen, euch bereits ab Freitag, dem 5. Juni, bis Sonntag, dem 7., willkommen zu heißen. <br />
         Bitte füllt das untenstehende Formular bis spätestens zum 1. September aus, damit wir alles vorbereiten können. <br /><br />
         <strong>Treffpunkt: Domaine de la Saigne, 6 Rue de la Saigne, 03300 Creuzier-le-Vieux.</strong>
       </>
