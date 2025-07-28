@@ -15,7 +15,6 @@ export default function NotFound() {
           <p className="text-xl text-kgWildways-title">Invitation introuvable</p>
           <p className="text-kgWildways text-sm max-w-sm">
             Le lien est peut-être incorrect ou a expiré. <br />
-            <Link href="/" className="underline">Retour à l'accueil</Link>
           </p>
         </div>
       </div>
