@@ -100,6 +100,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
 
       if (!data || error) {
         notFound();
+        return
       } else {
         setGuest(data)
         setPresences(data.presences ?? Array(data.names.length).fill(undefined))

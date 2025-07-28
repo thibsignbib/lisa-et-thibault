@@ -51,12 +51,12 @@ text-wedding-home{
   margin-bottom: 0.7rem;
 }
 
-  .homepagepicture{
-    max-width: 45%;
-    margin-top: -3rem;
-    margin-bottom: -2rem;
-    text-align: center;
-  }
+.homepagepicture{
+  max-width: 45%;
+  margin-top: -3rem;
+  margin-bottom: -2rem;
+  text-align: center;
+}
 
 @media (max-width: 640px) {
   .text-wedding {
@@ -75,6 +75,10 @@ text-wedding-home{
 
    .text-kgWildways-title {
     font-size: 2rem;
+  }
+
+  text-wedding-home{
+    margin-bottom: -1rem;
   }
 
   .lisathibaultimage{
