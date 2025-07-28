@@ -138,8 +138,8 @@ export default function ClientInvitation({ slug }: { slug: string }) {
   const t = translations[guest.langue || "fr"]
 
   return (
-    <main className="min-h-screen text-[#1B3A2F] p-6 max-w-3xl mx-auto space-y-10 titlelisathibault">
-      <h1 className="text-wedding">Lisa & Thibault</h1>
+    <main className="min-h-screen text-[#1B3A2F] p-6 max-w-3xl mx-auto space-y-10">
+      <h1 className="text-wedding titlelisathibault">Lisa & Thibault</h1>
       <img src="/lisathibaultT.png" alt="Lisa et Thibault" className="mx-auto lisathibaultimage" />
       <h1 className="text-3xl text-kgWildways-title font-medium text-center tracking-tight">
         {guest.names.join(", ")},
@@ -271,7 +271,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
         <button
           onClick={handleSubmit}
           disabled={status === "saving"}
-          className="bg-[#1B3A2F] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-900 transition duration-300 shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+          className="cursor-pointer bg-[#1B3A2F] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-900 transition duration-300 shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {status === "saving" ? t.submitting : t.submit}
         </button>
