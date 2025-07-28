@@ -104,6 +104,10 @@ text-wedding-home{
     font-size: 2.5rem;
   }
 
+  text-wedding-home{
+    margin-bottom: -1rem;
+  }
+
     .lisathibaultimage{
   max-width: 75%;
   margin-bottom: 0.6rem;
