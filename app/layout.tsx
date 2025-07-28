@@ -3,10 +3,34 @@ import { Toaster } from "sonner";
 import "./globals.css";
 
 
-export const metadata: Metadata = {
-  title: "Lisa & Thibault",
-  description: "Faire-part de mariage – 6/6/2026 à Cusset",
-};
+export const metadata = {
+  title: "Lisa & Thibault – Mariage 2026",
+  description: "Lisa & Thibault vous invitent à leur mariage le 6 juin 2026.",
+  openGraph: {
+    title: "Lisa & Thibault – Mariage 2026",
+    description: "Lisa & Thibault vous invitent à leur mariage le 6 juin 2026.",
+    images: [
+      {
+        url: "/lisathibault.png",
+        width: 1200,
+        height: 630,
+        alt: "Lisa & Thibault",
+      },
+    ],
+  },
+  icons: {
+    icon: "/lisathibault.png",
+    shortcut: "/lisathibault.png",
+    apple: "/lisathibault.png",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lisa & Thibault – Mariage 2026",
+    description: "Lisa & Thibault vous invitent à leur mariage le 6 juin 2026.",
+    images: ["/lisathibault.png"],
+  },
+}
+
 
 export default function RootLayout({
   children,
