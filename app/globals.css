@@ -49,6 +49,9 @@
 
   .homepagepicture{
     max-width: 50%;
+    margin-top: -3rem;
+    margin-bottom: -2rem;
+    text-align: center;
   }
 
 @media (max-width: 640px) {
@@ -62,6 +65,8 @@
 
   .homepagepicture{
     max-width: 75%;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
    .text-kgWildways-title {
@@ -102,6 +107,8 @@
 
   .homepagepicture{
     max-width: 75%;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
 }

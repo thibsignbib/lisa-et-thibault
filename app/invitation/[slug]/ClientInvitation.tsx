@@ -1,10 +1,11 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { useRouter } from "next/navigation"
+import { notFound, useRouter } from "next/navigation"
 import { supabase } from "@/lib/supabase-browser"
 import { toast } from "sonner"
 import { Info } from "lucide-react"
+
 
 interface Guest {
   id: number
@@ -98,7 +99,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
         .single<Guest>()
 
       if (!data || error) {
-        router.push("/404")
+        notFound();
       } else {
         setGuest(data)
         setPresences(data.presences ?? Array(data.names.length).fill(undefined))
