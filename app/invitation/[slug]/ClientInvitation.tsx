@@ -138,9 +138,9 @@ export default function ClientInvitation({ slug }: { slug: string }) {
   const t = translations[guest.langue || "fr"]
 
   return (
-    <main className="min-h-screen text-[#1B3A2F] p-6 max-w-3xl mx-auto space-y-10">
+    <main className="min-h-screen text-[#1B3A2F] p-6 max-w-3xl mx-auto space-y-10 titlelisathibault">
       <h1 className="text-wedding">Lisa & Thibault</h1>
-      <img src="/lisathibaultT.png" alt="Lisa et Thibault" />
+      <img src="/lisathibaultT.png" alt="Lisa et Thibault" className="mx-auto lisathibaultimage" />
       <h1 className="text-3xl text-kgWildways-title font-medium text-center tracking-tight">
         {guest.names.join(", ")},
       </h1>
@@ -267,7 +267,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
         </section>
       ))}
 
-      <div className="text-center pt-4 mb-10 sm:mb-16 lg:mb-24">
+      <div className="text-center pt-4 buttonwithinimage">
         <button
           onClick={handleSubmit}
           disabled={status === "saving"}
@@ -277,7 +277,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
         </button>
       </div>
 
-      <img src="/bicyclesT.png" alt="Bicycles" />
+      <img src="/bicyclesT.png" alt="Bicycles" className="pointer-events-none" />
     </main>
   )
 }
