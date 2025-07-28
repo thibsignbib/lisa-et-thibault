@@ -41,6 +41,10 @@
   text-align: justify;
 }
 
+text-wedding-home{
+  margin-bottom: -1rem;
+}
+
 .text-kgWildways-title {
   font-family: "kgWildways";
   font-size: 3rem;
@@ -48,7 +52,7 @@
 }
 
   .homepagepicture{
-    max-width: 50%;
+    max-width: 45%;
     margin-top: -3rem;
     margin-bottom: -2rem;
     text-align: center;
