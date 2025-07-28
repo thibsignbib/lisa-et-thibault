@@ -58,12 +58,12 @@
   }
 
   .lisathibaultimage{
-  max-width: 70%;
+  max-width: 85%;
   margin-bottom: 0.6rem;
 }
 
 .buttonwithinimage{
-  margin-bottom: -2.1rem;
+  margin-bottom: -1.8rem;
 }
 }
 
@@ -80,7 +80,7 @@
     font-size: 3rem;
   }
 
-  .lisathibaultimage{
+    .lisathibaultimage{
   max-width: 75%;
   margin-bottom: 0.6rem;
 }
@@ -88,6 +88,7 @@
 .buttonwithinimage{
   margin-bottom: -2rem;
 }
+
 }
 
 
