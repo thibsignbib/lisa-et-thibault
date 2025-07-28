@@ -46,7 +46,7 @@ const translations = {
     info: "Un hébergement est déjà prévu pour vous, sur place, les deux nuits. Vous n’avez pas besoin d’en réserver un.",
     infochildren: (
       <>
-        Le mariage n’ayant pas été adapté pour accueillir les plus jeunes, nous vous incitons à les faire garder et à vous <s>bourrer la gueule</s> lâcher. Comme nous savons que faire garder les enfants n’est pas toujours facile, nous vous proposons quand même de choisir.
+        Le mariage n’ayant pas été adapté pour accueillir les plus jeunes, nous vous incitons à les faire garder et à vous <s>bourrer la gueule</s> lâcher. Comme nous savons que cette logistique est parfois compliquée, nous vous proposons quand même de choisir.
       </>
     ),
     submit: "Valider mes réponses",
