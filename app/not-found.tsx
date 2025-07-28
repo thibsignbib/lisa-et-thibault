@@ -16,7 +16,7 @@ export default function NotFound() {
           <p className="text-kgWildways text-sm max-w-sm">
             Le lien est peut-être incorrect ou a expiré.<br />
             Cliquez sur le lien envoyé par nos soins pour retrouver le faire-part personnalisé !<br />
-            N'hésitez-pas à nous contacter en cas de difficultés !
+            N’hésitez-pas à nous contacter en cas de difficultés !
           </p>
         </div>
       </div>
