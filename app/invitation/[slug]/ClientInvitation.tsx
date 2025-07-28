@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { supabase } from "@/lib/supabase-browser"
 import { toast } from "sonner"
-import { Info } from "lucide-react";
+import { Info } from "lucide-react"
 
 interface Guest {
   id: number
@@ -75,6 +75,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
   const router = useRouter()
   const [guest, setGuest] = useState<Guest | null>(null)
   const [loading, setLoading] = useState(true)
+  const [isReady, setIsReady] = useState(false)
 
   const [presences, setPresences] = useState<boolean[]>([])
   const [regimes, setRegimes] = useState<string[]>([])
@@ -83,6 +84,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
   const [dimanche, setDimanche] = useState<boolean[]>([])
   const [status, setStatus] = useState<"idle" | "saving" | "success" | "error">("idle")
 
+  // Chargement des données invité
   useEffect(() => {
     async function fetchGuest() {
       const { data, error } = await supabase
@@ -107,6 +109,23 @@ export default function ClientInvitation({ slug }: { slug: string }) {
     fetchGuest()
   }, [slug, router])
 
+  // Chargement polices + image
+  useEffect(() => {
+    const fontPromise = document.fonts.ready
+
+    const image = new Image()
+    image.src = "/lisathibaultT.png"
+    const imagePromise = new Promise((resolve) => {
+      image.onload = resolve
+      image.onerror = resolve
+    })
+
+    Promise.all([fontPromise, imagePromise]).then(() => {
+      setIsReady(true)
+    })
+  }, [])
+
+  // Soumission du formulaire
   async function handleSubmit() {
     if (!guest) return
     setStatus("saving")
@@ -124,16 +143,17 @@ export default function ClientInvitation({ slug }: { slug: string }) {
 
     if (error) {
       console.error("Erreur de mise à jour :", error)
-      toast.error(t.toastError)
+      toast.error(translations[guest.langue || "fr"].toastError)
       setStatus("error")
     } else {
-      toast.success(t.toastSuccess)
+      toast.success(translations[guest.langue || "fr"].toastSuccess)
       setStatus("success")
     }
   }
 
-  if (loading) return <p className="text-center mt-10">Chargement...</p>
-  if (!guest) return null
+  if (!guest || loading || !isReady) {
+    return <p className="text-center mt-10">Chargement...</p>
+  }
 
   const t = translations[guest.langue || "fr"]
 
