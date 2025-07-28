@@ -16,7 +16,7 @@ export default function NotFound() {
         {/* Texte à droite */}
         <div className="text-center sm:text-left space-y-2">
           <h1 className="text-4xl font-bold text-wedding">404</h1>
-          <p className="text-xl text-kgWildways-title">Invitation introuvable</p>
+          <p className="text-xl text-kgWildways-title">Page introuvable</p>
           <p className="text-kgWildways text-sm max-w-sm">
             Le lien est peut-être incorrect ou a expiré. <br />
             N’hésite pas à nous contacter si besoin.
