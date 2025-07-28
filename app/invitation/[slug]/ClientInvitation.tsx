@@ -192,7 +192,7 @@ export default function ClientInvitation({ slug }: { slug: string }) {
       {guest.names.map((name, i) => (
         
         <section key={i} className="rounded-2xl border border-gray-200 p-6 bg-white/90 shadow-md space-y-6">
-          {i === 2 && (
+          {i > 1 && (
             <div className="flex items-start gap-2 text-sm text-[#1B3A2F]/80">
                   <Info className="infoT shrink-0" />
                   <p>{t.infochildren}</p>
