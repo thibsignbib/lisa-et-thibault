@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 @font-face {
   font-family: "kgWildways";
   src: url("/fonts/KGWildways.ttf") format("truetype");
@@ -93,5 +95,3 @@
 
 
 
-
-@import "tailwindcss";
