@@ -5,8 +5,8 @@ import { supabase } from "@/lib/supabase-browser"
 
 interface Guest {
   names: string[]
-  presences: boolean[] | null
-  regime_alimentaire: string[] | null
+  presences: (boolean | null)[]
+  regime_alimentaire: (string | null)[]
 }
 
 export default function StatsPage() {
@@ -30,6 +30,7 @@ export default function StatsPage() {
 
   const confirmedNames: string[] = []
   const namesToFollowUp: string[] = []
+  const declinedNames: string[] = []
 
   let totalConfirmed = 0
   let totalVegetarian = 0
@@ -43,10 +44,11 @@ export default function StatsPage() {
       if (presence === true) {
         confirmedNames.push(name)
         totalConfirmed++
-
         if (regime === "vege") totalVegetarian++
         if (regime === "non-vege") totalNonVegetarian++
-      } else if (presence === undefined) {
+      } else if (presence === false) {
+        declinedNames.push(name)
+      } else if (presence === undefined || presence === null) {
         namesToFollowUp.push(name)
       }
     })
@@ -58,15 +60,15 @@ export default function StatsPage() {
       {loading ? (
         <p>Chargement...</p>
       ) : (
-        <div className="space-y-4">
+        <div className="space-y-6">
           <p><strong>Nombre total d’invités :</strong> {guests.reduce((sum, g) => sum + g.names.length, 0)}</p>
           <p><strong>Nombre de repas végétariens confirmés :</strong> {totalVegetarian}</p>
           <p><strong>Nombre de repas non-végé confirmés :</strong> {totalNonVegetarian}</p>
           <p><strong>Nombre total de personnes confirmées :</strong> {totalConfirmed}</p>
 
           <div>
-            <strong>Liste des personnes confirmées :</strong>
-            <ul className="list-disc list-inside">
+            <strong>✅ Liste des personnes confirmées :</strong>
+            <ul className="list-disc list-inside text-green-700">
               {confirmedNames.map((name, i) => (
                 <li key={`confirmed-${i}`}>{name}</li>
               ))}
@@ -74,10 +76,19 @@ export default function StatsPage() {
           </div>
 
           <div>
-            <strong>Liste des personnes à relancer :</strong>
-            <ul className="list-disc list-inside text-red-700">
+            <strong>🟠 Liste des personnes à relancer :</strong>
+            <ul className="list-disc list-inside text-orange-600">
               {namesToFollowUp.map((name, i) => (
                 <li key={`followup-${i}`}>{name}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <strong>❌ Liste des personnes ayant décliné :</strong>
+            <ul className="list-disc list-inside text-red-600">
+              {declinedNames.map((name, i) => (
+                <li key={`declined-${i}`}>{name}</li>
               ))}
             </ul>
           </div>
