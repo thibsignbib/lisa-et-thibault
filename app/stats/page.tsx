@@ -5,8 +5,8 @@ import { supabase } from "@/lib/supabase-browser"
 
 interface Guest {
   names: string[]
-  presences: boolean[]
-  regime_alimentaire: string[]
+  presences: boolean[] | null
+  regime_alimentaire: string[] | null
 }
 
 export default function StatsPage() {
@@ -15,7 +15,10 @@ export default function StatsPage() {
 
   useEffect(() => {
     async function fetchGuests() {
-      const { data, error } = await supabase.from("guests").select("names, presences, regime_alimentaire")
+      const { data, error } = await supabase
+        .from("guests")
+        .select("names, presences, regime_alimentaire")
+
       if (!error && data) {
         setGuests(data)
       }
@@ -32,10 +35,13 @@ export default function StatsPage() {
 
   guests.forEach((guest) => {
     guest.names.forEach((name, index) => {
-      if (guest.presences[index]) {
+      const isPresent = guest.presences?.[index]
+      const regime = guest.regime_alimentaire?.[index]
+
+      if (isPresent) {
         confirmedNames.push(name)
         totalConfirmed++
-        const regime = guest.regime_alimentaire[index]
+
         if (regime === "vege") totalVegetarian++
         if (regime === "non-vege") totalNonVegetarian++
       }
