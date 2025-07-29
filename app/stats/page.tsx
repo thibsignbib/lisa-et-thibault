@@ -29,21 +29,25 @@ export default function StatsPage() {
   }, [])
 
   const confirmedNames: string[] = []
+  const namesToFollowUp: string[] = []
+
   let totalConfirmed = 0
   let totalVegetarian = 0
   let totalNonVegetarian = 0
 
   guests.forEach((guest) => {
     guest.names.forEach((name, index) => {
-      const isPresent = guest.presences?.[index]
+      const presence = guest.presences?.[index]
       const regime = guest.regime_alimentaire?.[index]
 
-      if (isPresent) {
+      if (presence === true) {
         confirmedNames.push(name)
         totalConfirmed++
 
         if (regime === "vege") totalVegetarian++
         if (regime === "non-vege") totalNonVegetarian++
+      } else if (presence === undefined) {
+        namesToFollowUp.push(name)
       }
     })
   })
@@ -59,11 +63,21 @@ export default function StatsPage() {
           <p><strong>Nombre de repas végétariens confirmés :</strong> {totalVegetarian}</p>
           <p><strong>Nombre de repas non-végé confirmés :</strong> {totalNonVegetarian}</p>
           <p><strong>Nombre total de personnes confirmées :</strong> {totalConfirmed}</p>
+
           <div>
             <strong>Liste des personnes confirmées :</strong>
             <ul className="list-disc list-inside">
               {confirmedNames.map((name, i) => (
-                <li key={i}>{name}</li>
+                <li key={`confirmed-${i}`}>{name}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <strong>Liste des personnes à relancer :</strong>
+            <ul className="list-disc list-inside text-red-700">
+              {namesToFollowUp.map((name, i) => (
+                <li key={`followup-${i}`}>{name}</li>
               ))}
             </ul>
           </div>
