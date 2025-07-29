@@ -74,10 +74,9 @@ export default function StatsPage() {
           <p><strong>Nombre total d’invités :</strong> {guests.reduce((sum, g) => sum + g.names.length, 0)}</p>
           <p><strong>Nombre de repas végétariens confirmés :</strong> {totalVegetarian}</p>
           <p><strong>Nombre de repas non-végé confirmés :</strong> {totalNonVegetarian}</p>
-          <p><strong>Nombre total de personnes confirmées :</strong> {totalConfirmed}</p>
 
           <div>
-            <strong>✅ Liste des personnes confirmées :</strong>
+            <strong>✅ Liste des personnes confirmées ({confirmedNames.length}) :</strong>
             <ul className="list-disc list-inside text-green-700">
               {confirmedNames.map((name, i) => (
                 <li key={i}>{name}</li>
@@ -86,7 +85,7 @@ export default function StatsPage() {
           </div>
 
           <div>
-            <strong>🟠 Liste des personnes à relancer :</strong>
+            <strong>🟠 Liste des personnes à relancer ({namesToFollowUp.length}) :</strong>
             <ul className="list-disc list-inside text-orange-600">
               {namesToFollowUp.map((name, i) => (
                 <li key={i}>{name}</li>
@@ -95,7 +94,7 @@ export default function StatsPage() {
           </div>
 
           <div>
-            <strong>❌ Liste des personnes ayant décliné :</strong>
+            <strong>❌ Liste des personnes ayant décliné ({declinedNames.length}) :</strong>
             <ul className="list-disc list-inside text-red-700">
               {declinedNames.map((name, i) => (
                 <li key={i}>{name}</li>
