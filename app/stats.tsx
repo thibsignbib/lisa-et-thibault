@@ -49,7 +49,7 @@ export default function StatsPage() {
         <p>Chargement...</p>
       ) : (
         <div className="space-y-4">
-          <p><strong>Nombre total d'invités :</strong> {guests.reduce((sum, g) => sum + g.names.length, 0)}</p>
+          <p><strong>Nombre total d’invités :</strong> {guests.reduce((sum, g) => sum + g.names.length, 0)}</p>
           <p><strong>Nombre de repas végétariens confirmés :</strong> {totalVegetarian}</p>
           <p><strong>Nombre de repas non-végé confirmés :</strong> {totalNonVegetarian}</p>
           <p><strong>Nombre total de personnes confirmées :</strong> {totalConfirmed}</p>
