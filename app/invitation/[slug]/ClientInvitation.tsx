@@ -29,7 +29,7 @@ const translations = {
         Nous avons le bonheur de vous convier à notre mariage qui aura lieu le 06/06/2026 à 14 heures à la mairie de Cusset. <br /><br />
         Et comme le temps passe trop vite quand on est entouré de ceux qu’on aime, nous serions vraiment heureux de vous accueillir dès le vendredi 5 juin, jusqu’au dimanche 7. <br />
         Un hébergement gratuit est donc déjà prévu pour vous sur le lieu des festivités. <br /><br />
-        Le formulaire ci-dessous nous aidera à tout préparer, pourriez-vous le remplir d’ici le 1er septembre svp ? <br /><br />
+        Le formulaire ci-dessous nous aidera à tout préparer, pourriez-vous le remplir d’ici le 15 septembre svp ? <br /><br />
         <strong>Rendez-vous au Domaine de la Saigne, 6 Rue de la Saigne, 03300 Creuzier-le-Vieux.</strong>
       </>
     ),
