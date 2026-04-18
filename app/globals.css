@@ -43,6 +43,16 @@
   font-family: "kgWildways";
   font-size: 1.6rem;
   text-align: justify;
+  /* Largeur du bloc */
+  width: 85%;
+  max-width: 600px; /* Sécurité pour les grands écrans */
+  
+  /* Centrage horizontal du bloc */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Style du texte */
+  text-align: justify;
 }
 
 .text-wedding-home{
