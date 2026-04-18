@@ -22,10 +22,12 @@ export default function HomeClient() {
     })
 
     // Optionnel : debug Supabase
+    /* Mode RSVP :
     async function fetchGuests() {
       const { data, error } = await supabase.from("guests").select("*")
       console.log(data, error)
     }
+    */    
 
     fetchGuests()
   }, [])
@@ -43,7 +45,7 @@ export default function HomeClient() {
       <img
         src="/lisathibaultT.png"
         alt="Lisa & Thibault"
-        className="w-full max-w-md sm:max-w-lg md:max-w-xl h-auto mb-4 homepagepicture"
+        className="w-[60%] max-w-sm h-auto mb-4 homepagepicture"
       />
       <h1 className="text-wedding text-wedding-home text-4xl sm:text-6xl text-center">Lisa & Thibault</h1>
       <p className="text-kgWildways text-lg leading-relaxed backdrop-blur-sm p-4 rounded text-center">
