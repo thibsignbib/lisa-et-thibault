@@ -29,8 +29,9 @@ export default function HomeClient() {
     }
 
     fetchGuests()
+    */
   }, [])
-  */
+  
 
   if (!isReady) {
     return (
