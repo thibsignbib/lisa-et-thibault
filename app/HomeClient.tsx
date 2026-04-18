@@ -48,7 +48,7 @@ export default function HomeClient() {
           Cette page vous donnera tous les détails pratiques (accès, horaires, logistique) pour vous aider à le préparer !
           <br /><br />
           Nous vous attendons le vendredi 5 juin à partir de 14h au Domaine de la Saigne, 6 rue de la Saigne à Creuzier-le-Vieux (03300).<br />
-          Aucune cérémonie spécifique n'est prévue l'après-midi du vendredi; vous pourrez profiter des lieux avec nous, de balades sont aussi disponibles aux alentours du domaine.<br />
+          Aucune cérémonie n'est prévue l'après-midi du vendredi qui est dédiée aux retrouvailles. De belles balades sont aussi accessibles aux alentours du domaine.<br />
           Le soir, nous nous occupons du barbecue, et nous vous proposons d'apporter un petit quelque chose pour l'agrémenter (salade, accompagnement, dessert, ...).
           <br />
         </p>
