@@ -27,10 +27,10 @@ export default function HomeClient() {
       const { data, error } = await supabase.from("guests").select("*")
       console.log(data, error)
     }
-    */    
 
     fetchGuests()
   }, [])
+  */
 
   if (!isReady) {
     return (
