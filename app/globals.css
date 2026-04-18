@@ -77,7 +77,6 @@
 .homepagepicture {
   width: 60%; /* Ton souhait de 60% */
   max-width: 350px;
-  margin-top: -3rem;
   margin-bottom: -2rem;
 }
 
