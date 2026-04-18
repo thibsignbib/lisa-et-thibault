@@ -16,20 +16,29 @@
   font-display: swap;
 }
 
-.infoT{
+/* Évite le flash de contenu sans police */
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+.infoT {
   width: 1rem;
 }
 
-.titlelisathibault{
+.titlelisathibault {
   margin-bottom: -2rem;
 }
 
-.lisathibaultimage{
+.lisathibaultimage {
   max-width: 65%;
   margin-bottom: 0.6rem;
 }
 
-.buttonwithinimage{
+.buttonwithinimage {
   margin-bottom: -2.2rem;
 }
 
@@ -41,22 +50,21 @@
 
 .text-kgWildways {
   font-family: "kgWildways";
-  font-size: 1.6rem;
-  text-align: justify;
-  /* Largeur du bloc */
-  width: 85%;
-  max-width: 900px; /* Sécurité pour les grands écrans */
-  
-  /* Centrage horizontal du bloc */
-  margin-left: auto;
-  margin-right: auto;
-
-  /* Style du texte */
-  text-align: justify;
 }
 
-.text-wedding-home{
+/* Bloc de texte centré et justifié */
+.content-block {
+  width: 85%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.text-wedding-home {
   margin-bottom: -1rem;
+  font-size: 6rem; /* Ajusté pour la home */
 }
 
 .text-kgWildways-title {
@@ -65,79 +73,60 @@
   margin-bottom: 0.7rem;
 }
 
-.homepagepicture{
-  max-width: 30%;
+.homepagepicture {
+  width: 60%; /* Ton souhait de 60% */
+  max-width: 350px;
   margin-top: -3rem;
   margin-bottom: -2rem;
-  text-align: center;
 }
 
-@media (max-width: 640px) {
-  .text-wedding {
-    font-size: 4rem;
-  }
-
-  .text-kgWildways {
-    font-size: 1.25rem;
-    width: 100%;
-  }
-
-  .homepagepicture{
-    max-width: 75%;
-    margin-top: 1rem;
-    margin-bottom: 0;
-  }
-
-   .text-kgWildways-title {
-    font-size: 2rem;
-  }
-
-  .lisathibaultimage{
-  max-width: 85%;
-  margin-bottom: 0.6rem;
-}
-
-.buttonwithinimage{
-  margin-bottom: -1.6rem;
-}
-}
-
+/* RESPONSIVE TABLETTES */
 @media (max-width: 1024px) {
   .text-wedding {
     font-size: 5rem;
   }
 
-  .text-kgWildways {
-    font-size: 1.35rem;
-    width: 90%;
-  }
-
-   .text-kgWildways-title {
+  .text-kgWildways-title {
     font-size: 2.5rem;
   }
 
-  .homepagepicture{
-    max-width: 45%;
-    margin-top: 1rem;
-    margin-bottom: 0;
-  }
-
-.lisathibaultimage{
-  max-width: 75%;
-  margin-bottom: 0.6rem;
-}
-
-.buttonwithinimage{
-  margin-bottom: -1.8rem;
-}
-
-  .homepagepicture{
-    max-width: 45%;
+  .homepagepicture {
+    width: 45%;
+    max-width: 300px;
     margin-top: 0;
     margin-bottom: 0;
   }
 
+  .lisathibaultimage {
+    max-width: 75%;
+  }
 }
 
+/* RESPONSIVE MOBILES */
+@media (max-width: 640px) {
+  .text-wedding {
+    font-size: 4rem;
+  }
 
+  .content-block {
+    width: 100%;
+  }
 
+  .text-kgWildways {
+    font-size: 1.25rem;
+  }
+
+  .homepagepicture {
+    width: 75%;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  .text-kgWildways-title {
+    font-size: 2rem;
+  }
+
+  .lisathibaultimage {
+    max-width: 85%;
+  }
+}
