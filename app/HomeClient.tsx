@@ -44,9 +44,13 @@ export default function HomeClient() {
       <div className="content-block">
         <p className="text-kgWildways text-lg leading-relaxed backdrop-blur-sm p-4 rounded">
           Le mariage approche ! <br /><br />
-          Nous avons hâte de vous retrouver le 06 juin 2026 à 14h à la mairie de Cusset. 
-          Cette page sera mise à jour avec tous les détails pratiques (accès, horaires, logistique) 
-          pour vous aider à préparer ce beau weekend.
+          Nous avons hâte de vous retrouver pour ce weekend si particulier pour nous. 
+          Cette page vous donnera tous les détails pratiques (accès, horaires, logistique) pour vous aider à le préparer !
+          <br /><br />
+          Nous vous attendons le vendredi 5 juin à partir de 14h au Domaine de la Saigne, 6 rue de la Saigne à Creuzier-le-Vieux (03300).<br />
+          Aucune cérémonie spécifique n'est prévue l'après-midi du vendredi; vous pourrez profiter des lieux avec nous, de balades sont aussi disponibles aux alentours du domaine.<br />
+          Le soir, nous nous occupons du barbecue, et nous vous proposons d'apporter un petit quelque chose pour l'agrémenter (salade, accompagnement, dessert, ...).
+          <br />
         </p>
       </div>
     </main>
