@@ -6,7 +6,7 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
   // 1. On laisse passer la page stats et tes variantes "en dur"
-  const allowedPaths = ['/stats', '/gite', '/domaine', '/famille'] 
+  const allowedPaths = ['/stats', '/infos-camping-car', '/infos-domaine', 'infos-logistique', '/guten-rutsch'] 
   if (allowedPaths.some(path => pathname.startsWith(path))) {
     return NextResponse.next()
   }

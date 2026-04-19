@@ -23,11 +23,17 @@ export default function HomeClient() {
 
   // Logique des messages personnalisés
   const getAccommodationMessage = () => {
-    if (pathname === "/gite") {
-      return "Un hébergement est déjà prévu pour vous dans un gîte très proche du domaine. Il vous suffit simplement d'apporter votre linge de toilette.";
+    if (pathname === "/infos-camping-car") {
+      return "Vous avez la possibilité de garer votre camping-car ou van directement dans le domaine. Il n'y a malheureusement pas d'aire de branchement (eau, elec), mais vous aurez la possibilité de vous doucher dans le gîte ou d'utiliser les frigos si nécessaire.";
     }
-    if (pathname === "/domaine") {
-      return "Un hébergement est déjà prévu pour vous sur place, directement au Domaine de la Saigne. Il vous suffit simplement d'apporter votre linge de toilette.";
+    if (pathname === "/infos-domaine") {
+      return "Un hébergement est déjà prévu pour vous sur place. Il vous suffit simplement d'apporter votre linge de toilette.";
+    }
+    if (pathname === "/infos-logistique"){
+      return "Un hébergement est déjà prévu pour vous sur place, mais nous vous demanderons d'apporter duvets, oreillers et linge de toilette svp.";
+    }
+    if (pathname === "/guten-rutsch"){
+      return ""
     }
     // Message par défaut pour la racine "/" ou autres
     return "Un hébergement est déjà prévu pour vous, soit sur le domaine, soit dans des gîtes très proches. Il vous suffit simplement d'apporter votre linge de toilette.";
@@ -66,7 +72,7 @@ export default function HomeClient() {
             Un déroulé complet du weekend vous sera distribué à votre arrivée.
           </p>
 
-          <p className="font-bold border-l-4 border-[#1B3A2F] pl-4 py-1 italic bg-white/30">
+          <p className="font-bold border-l-4 border-[#1B3A2F] pl-4 py-1 italic">
             {getAccommodationMessage()}
           </p>
 
