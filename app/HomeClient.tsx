@@ -49,16 +49,16 @@ export default function HomeClient() {
           <br /><br />
           Nous vous attendons le vendredi 5 juin à partir de 14h au Domaine de la Saigne, et les festivités dureront jusqu'au dimanche 7 juin à 15h.<br />Un déroulé complet du weekend vous sera distribué à votre arrivée.
           <br /><br />
-          Un hébergement est déjà prévu pour vous, soit sur le domaine, soit dans des gîtes très proches. Vous n'avez pas à apporter de linge de lit, en revanche le linge de toilette n'est pas fourni. 
+          Un hébergement est déjà prévu pour vous, soit sur le domaine, soit dans des gîtes très proches. Il vous suffit simplement d'apporter votre linge de toilette. 
           <br /><br />
           <b>Vendredi 05 juin :</b> aucune cérémonie n'est prévue l'après-midi du vendredi qui est dédiée aux retrouvailles. De belles balades sont aussi accessibles aux alentours du domaine.<br />
-          Le soir, nous nous occuperons du barbecue, et nous vous proposons d'apporter un petit quelque chose pour l'agrémenter (salade, accompagnement, dessert, ...).<br />Vous n'avez pas à prévoir de nourriture pour les autres repas du weekend.
+          Le soir, nous vous proposons d'apporter un petit quelque chose (salade, cake/quiche, fruits, dessert, ...). Nous nous occupons de la viande du barbecue.<br />Vous n'avez pas à prévoir de nourriture pour les autres repas du weekend.
           <br /><br />
           <b>Samedi 06 juin :</b> le mariage civil aura lieu à la mairie de Cusset à 14h, s'en suivra une cérémonie laïque au domaine, entre 15h et 16h. Puis cocktail, repas et soirée jusqu'au bout de la nuit !
           <br /><br />
           <b>Dimanche 07 juin :</b> un brunch sera servi en fin de matinée.
           <br /><br />
-          <b>Adresse du domaine: 6 rue de la Saigne, 03300 Creuzier-le-Vieux.</b>
+          <b>Adresse du domaine:</b> 6 rue de la Saigne, 03300 Creuzier-le-Vieux.
         </p>
       </div>
     </main>
