@@ -15,7 +15,7 @@ export function middleware(request: NextRequest) {
 
   // 2. Gestion des variantes (gite, domaine, etc.)
   // On "rewrite" (réécriture interne) vers la racine en gardant l'URL propre
-  const variants = ['/infos-camping-car', '/infos-domaine', 'infos-logistique', 'guten-rutsch']
+  const variants = ['/infos-camping-car', '/infos-domaine', '/infos-logistique', '/guten-rutsch']
   if (variants.includes(pathname)) {
     return NextResponse.rewrite(new URL('/', request.url))
   }
