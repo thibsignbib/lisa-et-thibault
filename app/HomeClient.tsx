@@ -132,7 +132,7 @@ export default function HomeClient() {
                 className="inline-flex items-center gap-2 bg-[#1B3A2F] text-[#fdfaf5] px-5 py-2 rounded-full text-base hover:bg-opacity-90 transition-all shadow-sm"
               >
                 <MessageCircle size={18} />
-                Rejoindre le groupe Covoiturage
+                Rejoindre le groupe
               </a>
             </div>
           )}
