@@ -41,7 +41,7 @@ export default function HomeClient() {
     if (pathname === "/infos-copains") {
       return "Un hébergement est déjà prévu pour vous sur place. Il faudra apporter vos duvets, oreillers et linge de toilette svp.";
     }
-    return "Cliquez sur le lien que nous vous avons envoyé pour accéder aux détails de votre logement.<br />Klickt auf den Link, den wir euch geschickt haben, um die Details zu eurer Unterkunft aufzurufen.";
+    return "Cliquez sur le lien que nous vous avons envoyé pour accéder aux détails de votre logement | Klickt auf den Link, den wir euch geschickt haben, um die Details zu eurer Unterkunft aufzurufen.";
   };
 
   if (!isReady) {
