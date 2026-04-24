@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
+import { MessageCircle } from "lucide-react" // Pour la petite icône WhatsApp
 
 export default function HomeClient() {
   const [isReady, setIsReady] = useState(false)
@@ -23,20 +24,22 @@ export default function HomeClient() {
 
   // Logique des messages personnalisés
   const getAccommodationMessage = () => {
-    if (pathname === "/infos-camping-car") {
+    if (pathname === "/infos-camping") {
       return "Vous avez la possibilité de garer votre camping-car ou van directement dans le domaine. Il n'y a malheureusement pas d'aire de branchement (eau, elec), mais vous aurez la possibilité de vous doucher dans le gîte ou d'utiliser les frigos si nécessaire.";
+    }
+    if (pathname === "/infos-gite") {
+      return "Un hébergement est déjà prévu pour vous dans un gite proche du domaine. Il vous suffit simplement d'apporter votre linge de toilette.";
     }
     if (pathname === "/infos-domaine") {
       return "Un hébergement est déjà prévu pour vous sur place. Il vous suffit simplement d'apporter votre linge de toilette.";
     }
-    if (pathname === "/infos-logistique"){
-      return "Un hébergement est déjà prévu pour vous sur place, mais nous vous demanderons d'apporter duvets, oreillers et linge de toilette svp.";
+    if (pathname === "/infos-copains"){
+      return "Un hébergement est déjà prévu pour vous sur place. Il faudra apporter vos duvets, oreillers et linge de toilette svp.";
     }
     if (pathname === "/guten-rutsch"){
-      return ""
+      return "Wochenendprogramm"
     }
-    // Message par défaut pour la racine "/" ou autres
-    return "Un hébergement est déjà prévu pour vous, soit sur le domaine, soit dans des gîtes très proches. Il vous suffit simplement d'apporter votre linge de toilette.";
+    return "Cliquez sur le lien que nous vous avons envoyé pour accéder au détails de votre logement et au linge nécessaire.";
   };
 
   if (!isReady) {
@@ -72,7 +75,7 @@ export default function HomeClient() {
             Un déroulé complet du weekend vous sera distribué à votre arrivée.
           </p>
 
-          <p className="font-bold border-l-4 border-[#1B3A2F] pl-4 py-1 italic">
+          <p className="font-bold border-l-4 border-[#1B3A2F] pl-4 py-1 italic bg-white/20">
             {getAccommodationMessage()}
           </p>
 
@@ -89,6 +92,22 @@ export default function HomeClient() {
           <p>
             <b>Dimanche 07 juin :</b> un brunch sera servi en fin de matinée.
           </p>
+
+          {/* SECTION WHATSAPP */}
+          <div className="bg-[#1B3A2F]/5 border border-[#1B3A2F]/10 rounded-xl p-5 text-center space-y-3">
+            <p className="text-base sm:text-lg">
+              Comme vous êtes plusieurs à venir en train, un groupe WhatsApp a été créé pour mutualiser les trajets entre la gare et le domaine :
+            </p>
+            <a 
+              href="https://chat.whatsapp.com/BcGD2dy9pqs4UBTYjHa3Pl" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-[#1B3A2F] text-[#fdfaf5] px-5 py-2 rounded-full text-base hover:bg-opacity-90 transition-all shadow-sm"
+            >
+              <MessageCircle size={18} />
+              Rejoindre le groupe
+            </a>
+          </div>
 
           <p className="pt-4 text-center border-t border-[#1B3A2F]/20">
             <b>Adresse du domaine :</b> 6 rue de la Saigne, 03300 Creuzier-le-Vieux.
