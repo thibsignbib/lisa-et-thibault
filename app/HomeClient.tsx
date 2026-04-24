@@ -86,11 +86,11 @@ export default function HomeClient() {
           </p>
 
           {/* LOGEMENT (DYNAMIQUE) */}
-          {isGerman ? (
-          <p className="font-bold border-l-4 border-[#1B3A2F] pl-4 py-1 italic">
-            {getAccommodationMessage()}
-          </p>
-          ):(<></>)}
+          {isGerman ? (<></>):(
+            <><p className="font-bold border-l-4 border-[#1B3A2F] pl-4 py-1 italic">
+              {getAccommodationMessage()}
+            </p></>)
+          }
 
           {/* VENDREDI SOIR */}
           <p>
