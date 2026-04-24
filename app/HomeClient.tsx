@@ -81,7 +81,7 @@ export default function HomeClient() {
             {isGerman ? (
               <>Wir erwarten euch am Freitag, den 5. Juni ab 14 Uhr auf der Domaine de la Saigne. Die Feierlichkeiten dauern bis Sonntag, den 7. Juni um 15 Uhr. Ein detaillierter Ablauf des Wochenendes wird euch bei eurer Ankunft ausgehändigt.</>
             ) : (
-              <>Nous vous attendons le vendredi 5 juin à partir de 14h au Domaine de la Saigne, et les festivités dureront jusqu'au dimanche 7 juin à 15h. Un déroulé complet du weekend vous sera distribué à votre arrivée.</>
+              <>Nous vous attendons le vendredi 5 juin entre 14h et 17h au Domaine de la Saigne, et les festivités dureront jusqu'au dimanche 7 juin à 15h. Un déroulé complet du weekend vous sera distribué à votre arrivée.</>
             )}
           </p>
 
@@ -120,10 +120,10 @@ export default function HomeClient() {
           </p>
 
           {/* SECTION WHATSAPP (Cachée en Allemand) */}
-          {!isGerman && (
+          {!isGerman && pathname !== "/infos-camping" && (
             <div className="bg-[#1B3A2F]/5 border border-[#1B3A2F]/10 rounded-xl p-5 text-center space-y-3">
               <p className="text-base sm:text-lg">
-                Pour faciliter vos déplacements (gare de Vichy) ou mutualiser les trajets, un groupe WhatsApp a été créé :
+                Comme plusieurs d'entre vous viennent en train, un groupe Whatsapp a été créé pour mutualiser les déplacements entre la gare de Vichy et le domaine :
               </p>
               <a 
                 href="https://chat.whatsapp.com/BcGD2dy9pqs4UBTYjHa3Pl" 
